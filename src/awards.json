@@ -1,0 +1,122 @@
+[
+  {
+    "ceremony": "Content Marketing Institute Awards",
+    "year": "2021",
+    "award": "Strategy: Highest Subscriber Growth",
+    "channels": ["Integrated", "Content", "Email", "Social", "Creative"],
+    "logo": "cma2021_logo.jpg",
+    "industry": "B2C"
+  },
+  {
+    "ceremony": "European Search Awards",
+    "year": "2020",
+    "award": "Best Retail Campaign (PPC)",
+    "channels": ["PPC"],
+    "logo": "esa2020_logo.jpg",
+    "industry": "Retail"
+  },
+  {
+    "ceremony": "European Search Awards",
+    "year": "2020",
+    "award": "Best B2C Campaign (PPC)",
+    "channels": ["PPC"],
+    "logo": "esa2020_logo.jpg",
+    "industry": "Retail"
+  },
+  {
+    "ceremony": "European Search Awards",
+    "year": "2020",
+    "award": "Best PPC Campaign",
+    "channels": ["PPC"],
+    "logo": "esa2020_logo.jpg",
+    "industry": "Retail"
+  },
+  {
+    "ceremony": "Digital Media Awards",
+    "year": "2020",
+    "award": "Best Search Campaign",
+    "channels": ["PPC"],
+    "logo": "dma2020_logo.jpg",
+    "industry": "Retail"
+  },
+  {
+    "ceremony": "Digital Media Awards",
+    "year": "2020",
+    "award": "Best Agency",
+    "channels": ["Agency"],
+    "logo": "dma2020_logo.jpg",
+    "industry": "Digital Marketing"
+  },
+  {
+    "ceremony": "Digital Media Awards",
+    "year": "2020",
+    "award": "Best Social Media",
+    "channels": ["Social"],
+    "logo": "dma2020_logo.jpg",
+    "industry": "Retail"
+  },
+  {
+    "ceremony": "European Search Awards",
+    "year": "2019",
+    "award": "Best Use of Search B2C",
+    "channels": ["PPC"],
+    "logo": "esa2019_logo.jpg",
+    "industry": "Retail"
+  },
+  {
+    "ceremony": "European Search Awards",
+    "year": "2019",
+    "award": "Best Use of Social Media In A Search Campaign",
+    "channels": ["Integrated", "PPC", "SEO"],
+    "logo": "esa2019_logo.jpg",
+    "industry": "Retail"
+  },
+  {
+    "ceremony": "European Search Awards",
+    "year": "2019",
+    "award": "The European Search Diversity, Inclusion and Equality Award",
+    "channels": ["Agency"],
+    "logo": "esa2019_logo.jpg",
+    "industry": "Digital Marketing"
+  },
+  {
+    "ceremony": "European Search Awards",
+    "year": "2019",
+    "award": "Best Large Integrated Search Agency",
+    "channels": ["Agency"],
+    "logo": "esa2019_logo.jpg",
+    "industry":"Digital Marketing"
+  },
+  {
+    "ceremony": "Digital Media Awards",
+    "year": "2019",
+    "award": "Best Strategy",
+    "channels": ["Integrated", "PPC", "Social", "SEO"],
+    "logo": "dma2019_logo.jpg",
+    "industry": "Retail"
+  },
+  {
+    "ceremony": "Digital Media Awards",
+    "year": "2019",
+    "award": "Best Integrated Digital Campaign",
+    "channels": ["Integrated", "PPC", "Social", "SEO"],
+    "logo": "dma2019_logo.jpg",
+    "industry": "Retail"
+  },
+  {
+    "ceremony": "Digital Media Awards",
+    "year": "2019",
+    "award": "Best In Data & Analytics",
+    "channels": ["Integrated", "PPC", "Social", "SEO"],
+    "logo": "dma2019_logo.jpg",
+    "industry": "Retail"
+  },
+  {
+    "ceremony": "European Search Awards",
+    "year": "2018",
+    "award": "Best Large Integrated Search Agency",
+    "channels": ["Agency"],
+    "logo": "esa2018_logo.jpg",
+    "industry": "Digital Marketing"
+  }
+]
