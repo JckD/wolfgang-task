@@ -1,13 +1,144 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html{
+  background: #fff;
+  height: 100%;
+  position: relative;
+  width: 100%;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+  top: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
+
+body {
+ background: #fff;
+ height: 100%;
+ position: relative;
+ width: 100%;
+ padding: 0;
+ margin: 0;
+}
+
+.nav {
+  position: absolute;
+  z-index:1; 
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  
+  color: #fff;
+ 
+  /* font: 700 1.3125 em; */
+  font-weight: 700;
+  font-family: lato, "helvetica neue", Helvetica, Arial, sans-serif;
+  letter-spacing: .05em;
+  line-height: 2.25em; 
+  font-size: 1em;
+  padding: 20px;
+  position: relative; 
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav li a:hover{
+  text-decoration: underline;
+
+}
+
+.banner {
+  height: 400px;
+  width: 100%;
+ position: relative;
+  
+  background-image: url("./images/header_banner.jpg");
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-line {
+  display: inline;
+  position: relative;
+}
+
+h1 {
+  color:#fff;
+
+  font-weight: 600;
+  font-size: 4.1875em;
+  font-family: lato, "helvetica neue", Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+
+.bannerText {
+  color: #fff;
+
+
+}
+
+.logo {
+  margin-right: 170px;
+}
+
+.about {
+  margin: 0px 360px;
+  padding: 64px 0px;
+  display: flex;
+}
+
+.about p {
+  color: #6E6E6E;
+  font-weight: 400;
+  font-stretch: normal;
+  font-size: 1em;
+  line-height: 1.75em;
+  font-family: lato, "helvetica neue", Helvetica, Arial, sans-serif;
+ 
+}
+
+.text-container {
+  padding: 16px;
+  height: 304px;
+  width: 700px;
+  margin: 0px;
+}
+
+.img-container {
+  height: 300px;
+  width: 460px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: baseline;
+}
+
+.awards {
+  height: 600PX;
+  width: 100%;
+  background: #F8F8F8;
+
+}
+
