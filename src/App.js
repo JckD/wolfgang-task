@@ -2,17 +2,14 @@ import wolfgangLogo from './images/wolfgang_logo.svg'
 import contentImage from './images/content_image.jpg'
 import AwardGroup from './components/awardGroup';
 import React,{useState,useEffect} from 'react';
+import { toggleDiv } from './utils/toggleDiv';
 
 
-const AwardCategory = props => {
-  <div className="filter-category">
-
-  </div>
-}
 
 function App() {
   const [data,setData]=useState([]);
 
+  // read in awards json
   const getData=()=>{
     fetch('./awards.json'
     ,{
@@ -28,14 +25,30 @@ function App() {
       })
       .then(function(awardsJson) {
         console.log(awardsJson);
+        setData(awardsJson)
       });
   }
+
+  
+
+
   useEffect(()=>{
     getData()
   },[])
 
+  const unique = (value, index, self) => {
+    return self.indexOf(value) === index
+  }
+
+  //create arrays of unique filter categories for check boxes from data json.
+  let uniqueAwards = data.map(item => item.ceremony).filter(unique)
+  let years = data.map(item => item.year).filter(unique)
+  // have to use flat() on channels as they are subarrays.
+  let channels = data.map(item => item.channels).flat().filter(unique)
+  let industries = data.map(item => item.industry).filter(unique)
+
   return (
-    <div className="container">
+    <>
       <header>
        
           
@@ -94,38 +107,72 @@ function App() {
                 </div>
                 <div className="filter-categories">
                   <div className="filter-category">
-                    <button className="filter-button">
+                    <button className="filter-button" onClick={() => toggleDiv('awardsCategory')}>
                       <span>By Awards Category</span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
                       </svg>
                     </button>
+                    <div className="filter-list hidden" id="awardsCategory">
+                      {
+                        /* generate filter list from unique awards list */
+                        uniqueAwards.map((item)=><div className="filter-input-div" key={item}>
+                                                  <input className="filter-input" type="checkbox" id={item}/>
+                                                  <label className="filter-label" htmlFor={item}>{item}</label>
+                                                </div>)
+                      }
+                    </div>
                   </div>
                   <div className="filter-category">
-                    <button className="filter-button">
+                    <button className="filter-button" onClick={() => toggleDiv('years')}>
                       <span>By Year</span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
                       </svg>
                     </button>
+                    <div className="filter-list hidden" id="years">
+                      {
+                        /* generate filter list from unique awards list */
+                        years.map((item)=><div className="filter-input-div" key={item}>
+                                                  <input className="filter-input" type="checkbox" id={item}/>
+                                                  <label className="filter-label" htmlFor={item}>{item}</label>
+                                                </div>)
+                      }
+                    </div>
                   </div>
-                   
-                   
                     <div className="filter-category">
-                      <button className="filter-button">
+                      <button className="filter-button" onClick={() => toggleDiv('channels')}>
                         <span>By Channel</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
                         </svg>
                       </button>
+                      <div className="filter-list hidden" id="channels">
+                      {
+                        /* generate filter list from unique awards list */
+                        channels.map((item)=><div className="filter-input-div" key={item}>
+                                                  <input className="filter-input" type="checkbox" id={item}/>
+                                                  <label className="filter-label" htmlFor={item}>{item}</label>
+                                                </div>)
+                      }
+                    </div>
                     </div>
                     <div className="filter-category"> 
-                      <button className="filter-button">
+                      <button className="filter-button" onClick={() => toggleDiv('industry')}>
                         <span>By Industry</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
                         </svg>
                       </button>
+                      <div className="filter-list hidden" id="industry">
+                      {
+                        /* generate filter list from unique awards list */
+                        industries.map((item)=><div className="filter-input-div" key={item}>
+                                                  <input className="filter-input" type="checkbox" id={item}/>
+                                                  <label className="filter-label" htmlFor={item}>{item}</label>
+                                                </div>)
+                      }
+                    </div>
                     </div>
                     
                   
@@ -138,7 +185,7 @@ function App() {
 
           </div>
       </body>
-    </div>
+    </>
   );
 }
 

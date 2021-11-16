@@ -14,7 +14,7 @@ header {
 }
 
 body {
- background: #fff;
+ background: #f8f8f8;
  height: 100%;
  position: relative;
  width: 100%;
@@ -105,7 +105,7 @@ h1 {
   /* margin: 0px 360px; */
   padding: 64px 0px;
   display: flex;
-
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,7 +139,7 @@ h1 {
 }
 
 .awards-section {
-  height: 600PX;
+  height: fit-content;
   
   background: #F8F8F8;
 
@@ -220,6 +220,33 @@ h1 {
 
 }
 
+.filter-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-input-div {
+  margin-bottom: 10px;
+  
+}
+
+.filter-input {
+ box-sizing: border-box;
+
+}
+
+.filter-label {
+  color: #6E6E6E;
+  font-family: Arial;
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+
 .awards-list {
   width: 750px;
+}
+
+.hidden {
+  display: none;
 }
