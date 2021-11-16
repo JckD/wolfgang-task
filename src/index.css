@@ -70,6 +70,8 @@ body {
  position: relative;
   
   background-image: url("./images/header_banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -91,11 +93,8 @@ h1 {
   margin: 0;
 }
 
-
 .bannerText {
   color: #fff;
-
-
 }
 
 .logo {
@@ -103,9 +102,13 @@ h1 {
 }
 
 .about {
-  margin: 0px 360px;
+  /* margin: 0px 360px; */
   padding: 64px 0px;
   display: flex;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about p {
@@ -135,10 +138,88 @@ h1 {
   vertical-align: baseline;
 }
 
-.awards {
+.awards-section {
   height: 600PX;
-  width: 100%;
+  
   background: #F8F8F8;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px;
+
 
 }
 
+.award-filters {
+  width: 400px;
+  height: 1340px;
+  display: flex;
+  flex-direction: column; 
+  padding-right: 50px;
+}
+
+.filter-title {
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: space-between;
+  align-items: baseline;
+  height: fit-content;
+  padding-top: 4px;
+  margin-bottom: 24px;
+}
+
+.filter-title button {
+  height: fit-content;
+  border: none;
+  cursor: pointer;
+  color: #38897e;
+  font-size: 0.75rem;
+  padding: 4px;
+  border-radius: 4px;
+
+}
+
+.filter-title button :hover {
+  color: #b2eae3;
+}
+
+.filter-title label {
+  font-family: lato, "helvetica neue", Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #6E6E6E
+}
+
+.filter-category {
+  border-bottom: 1px solid #634061;
+  margin-bottom: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.filter-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  height: fit-content;
+  cursor: pointer;
+  color: #6E6E6E;
+  border: none;
+  background: none;
+  padding: 6px 0;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: fit-content;
+  font-size: 16px;
+  font-family: arial;
+  font-weight: bold;
+
+}
+
+.awards-list {
+  width: 750px;
+}
