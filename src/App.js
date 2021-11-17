@@ -184,6 +184,10 @@ function App() {
 
           </div>
       </body>
+      <footer className="footer">
+        <h2>Talk to us about your next award winning campaign</h2>
+        <a href="https://www.wolfgangdigital.com/contact/">Get in Touch</a>
+      </footer>
     </>
   );
 }
