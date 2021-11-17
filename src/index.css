@@ -247,6 +247,86 @@ h1 {
   width: 750px;
 }
 
+.awards-list p {
+  font-family: lato, "helvetica neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #6E6E6E;
+  margin: 0 0 16px;
+}
+
+.awards-group {
+  background: #fff;
+  padding: 1rem;
+  margin: 0 0 2rem 0;
+  border-top: 4px solid #634061;
+
+}
+
+.awards-group-italics {
+  color: #6E6E6E;
+  font-weight: normal;
+  font-size: 1rem;
+  margin-left: 1rem;
+  font-style: italic;
+  line-height: 1;
+  font-family: lato, "helvetica neue", Helvetica, Arial, sans-serif;
+
+}
+
+.awards-svg {
+  right: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+}
+
+
+.awards-group h2 {
+  font-size: 1.875em;
+  margin: 0 0 0 0;
+  color: #6E6E6E;
+  font-family: lato, "helvetica neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+}
+
+.ceremony {
+
+  display: grid;
+  border-top: 1px dotted #6DB2AA;
+  grid-template-columns: 1fr auto;
+}
+
+.ceremony span {
+  color: #3F9B90;
+  font-weight: bold;
+}
+
+.ceremony h3 {
+  color: #6E6E6E;
+  font-family: lato, "helvetica neue", Helvetica, Arial, sans-serif;
+  margin: 0 0 11px 0;
+  padding: 16px 0 0;
+  height: fit-content;
+}
+
+.ceremony h4 {
+  color: #6E6E6E;
+  font-family: lato, "helvetica neue", Helvetica, Arial, sans-serif;
+  margin: 0 0 14px 0;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.award {
+ text-decoration: none;
+}
+
+.award :hover {
+  text-decoration: underline;
+}
+
 .hidden {
   display: none;
 }

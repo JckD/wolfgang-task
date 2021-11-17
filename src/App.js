@@ -2,12 +2,17 @@ import wolfgangLogo from './images/wolfgang_logo.svg'
 import contentImage from './images/content_image.jpg'
 import AwardGroup from './components/awardGroup';
 import React,{useState,useEffect} from 'react';
-import { toggleDiv } from './utils/toggleDiv';
+import { ToggleDivByID } from './utils/toggleDiv';
+import { useCountAwards } from './utils/useCountAwards';
 
 
 
 function App() {
+
+  document.title = 'Awards | Wolfgang Digital'
   const [data,setData]=useState([]);
+
+  // let awardCount = useCountAwards();
 
   // read in awards json
   const getData=()=>{
@@ -29,12 +34,16 @@ function App() {
       });
   }
 
-  
-
 
   useEffect(()=>{
     getData()
+    
   },[])
+
+
+  const GetAwardsCount = () => {
+   
+  }
 
   const unique = (value, index, self) => {
     return self.indexOf(value) === index
@@ -49,9 +58,7 @@ function App() {
 
   return (
     <>
-      <header>
-       
-          
+      <header>    
           <div className="nav">
             <a href="https://www.wolfgangdigital.com/">
             <img className="logo" alt="wolfgang digital logo" src={wolfgangLogo}/>
@@ -78,8 +85,6 @@ function App() {
               </li>
             </ul>
           </div>
-
-       
            
       </header>
       <body>
@@ -107,7 +112,7 @@ function App() {
                 </div>
                 <div className="filter-categories">
                   <div className="filter-category">
-                    <button className="filter-button" onClick={() => toggleDiv('awardsCategory')}>
+                    <button className="filter-button" onClick={() => ToggleDivByID('awardsCategory')}>
                       <span>By Awards Category</span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
@@ -124,7 +129,7 @@ function App() {
                     </div>
                   </div>
                   <div className="filter-category">
-                    <button className="filter-button" onClick={() => toggleDiv('years')}>
+                    <button className="filter-button" onClick={() => ToggleDivByID('years')}>
                       <span>By Year</span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
@@ -134,14 +139,14 @@ function App() {
                       {
                         /* generate filter list from unique awards list */
                         years.map((item)=><div className="filter-input-div" key={item}>
-                                                  <input className="filter-input" type="checkbox" id={item}/>
+                                                  <input className="filter-input" type="checkbox" id={item + 1}/>
                                                   <label className="filter-label" htmlFor={item}>{item}</label>
                                                 </div>)
                       }
                     </div>
                   </div>
                     <div className="filter-category">
-                      <button className="filter-button" onClick={() => toggleDiv('channels')}>
+                      <button className="filter-button" onClick={() => ToggleDivByID('channels')}>
                         <span>By Channel</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
@@ -158,7 +163,7 @@ function App() {
                     </div>
                     </div>
                     <div className="filter-category"> 
-                      <button className="filter-button" onClick={() => toggleDiv('industry')}>
+                      <button className="filter-button" onClick={() => ToggleDivByID('industry')}>
                         <span>By Industry</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
@@ -179,8 +184,12 @@ function App() {
                 </div>
             </div>
             <div className="awards-list">
-              
-              <AwardGroup />
+              <p>Viewing {} of {data.length} awards</p>
+
+              {
+                years.map((item)=><AwardGroup year={item} data={data}/>)
+              }
+        
             </div>
 
           </div>
