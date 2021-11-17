@@ -3,18 +3,12 @@ import contentImage from './images/content_image.jpg'
 import AwardGroup from './components/awardGroup';
 import React,{useState,useEffect} from 'react';
 import { ToggleDivByID } from './utils/toggleDiv';
-import { useCountAwards } from './utils/useCountAwards';
-
-
 
 function App() {
 
   document.title = 'Awards | Wolfgang Digital'
-  const [data,setData]=useState([]);
-
-  // let awardCount = useCountAwards();
-
-  // read in awards json
+  const [data, setData]=useState([]);
+  
   const getData=()=>{
     fetch('./awards.json'
     ,{
@@ -40,10 +34,6 @@ function App() {
     
   },[])
 
-
-  const GetAwardsCount = () => {
-   
-  }
 
   const unique = (value, index, self) => {
     return self.indexOf(value) === index
@@ -184,7 +174,7 @@ function App() {
                 </div>
             </div>
             <div className="awards-list">
-              <p>Viewing {} of {data.length} awards</p>
+              <p id="shownAwards">Viewing 0 of {data.length} awards</p>
 
               {
                 years.map((item)=><AwardGroup year={item} data={data}/>)

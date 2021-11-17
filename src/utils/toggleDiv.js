@@ -1,4 +1,4 @@
-import { useCountAwards } from "./useCountAwards";
+import CountAwards from "./CountAwards";
 
 
 //toggle hidden class for div by ids for filter categorues
@@ -13,13 +13,13 @@ export function ToggleDivByID(id) {
        
         div.classList.add('hidden')
     }
-    //useCountAwards()
+    CountAwards()
 }
 
 
 //toggle hidden class for divs by names for awards
 export function ToggleDivByNames(name) {
-    const count = useCountAwards()
+   // const count = useCountAwards()
 
     let elements = document.getElementsByName(name);
         
@@ -43,6 +43,5 @@ export function ToggleDivByNames(name) {
         }
     }
 
-
-    
+    CountAwards()
 }
