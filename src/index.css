@@ -57,7 +57,14 @@ body {
   text-transform: uppercase;
   padding-top: 21px;
   margin-right: 80px;
-  text-decoration: underline;
+
+
+}
+
+.menu span {
+    border-bottom: 2px solid white;
+
+
 }
 
 .sub-menu {
@@ -88,10 +95,27 @@ body {
   text-decoration: none;
 }
 
-.menu-a :hover{
-  text-decoration: underline;
 
+.menu a:hover:after {
+  opacity: 1;
+  width: 100%;
 }
+
+
+.menu a:after {
+  background: none;
+
+  border: 1px solid white;
+  content: '';
+  bottom: -1px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+}
+
+
+
 
 .menu li.close {
   display: none;

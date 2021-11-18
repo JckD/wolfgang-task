@@ -54,10 +54,6 @@ function App() {
             <a href="https://www.wolfgangdigital.com/">
               <img className="logo" alt="wolfgang digital logo" src={wolfgangLogo}/>
             </a>
-              
-
-            
-            
               <ul className="menu">
               <li className="menu-title close" onClick={() => closeDrawer()}><span>Main Menu</span></li>
                 <li>
