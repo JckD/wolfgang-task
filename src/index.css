@@ -162,16 +162,17 @@ body {
 }
 
 .purple-line {
-  position: fixed;
+  position: absolute;
   display: block;
   background: #634061;
   left: 50%;
-  
-  top: 23.7%;
+  content: '';
+  top: 30%;
   height: 60px;
   width: 2px;
   margin-left: -1px;
-  z-index: 1;
+  z-index: 9999;
+
 }
 
 h1 {
@@ -205,6 +206,7 @@ h1 {
   align-items: center;
   flex-direction: row;
   z-index: 0;
+
 }
 
 @media only screen and (max-width: 1100px) {
@@ -221,9 +223,6 @@ h1 {
     padding: 0 0 0 0;
   }
 
-  .purple-line {
-    top: 24%;
-  }
 
   .menu {
     position: absolute;
@@ -305,9 +304,8 @@ h1 {
   }
   
   .purple-line {
-    top: 22.1%;
+    display: none;
   }
-
 
   .about {
     flex-direction: column-reverse;
