@@ -3,7 +3,7 @@ import contentImage from './images/content_image.jpg'
 import AwardGroup from './components/awardGroup';
 import React,{useState,useEffect} from 'react';
 import { ToggleDivByID } from './utils/toggleDiv';
-import { closeDrawer, drawer, openDrawer } from './utils/drawer';
+import { closeDrawer, openDrawer } from './utils/drawer';
 
 function App() {
 
