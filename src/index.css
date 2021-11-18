@@ -135,6 +135,63 @@ h1 {
   flex-direction: row;
 }
 
+@media only screen and (max-width: 1100px) {
+  .nav {
+    width: 100%;
+    padding: 15px 15px 15px 15px;
+
+    
+  }
+
+  .logo {
+    float: left;
+    width: 140px;
+    margin: 0 15px 0 15px;
+    padding: 0 0 0 0;
+
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+   
+    display: none;
+    background-color: #0d9b4a;
+    width: 300px;
+    height:100%;
+    z-index: 3;
+    transform: translateX(630px);
+    transition: all 200ms ease-in-out; 
+  }
+
+  .menu.open {
+    transform: translateX(0);
+  }
+
+  .menu li {
+    display: none;
+    padding: 0 14px;
+    
+  }
+
+  .menu li > a {
+    border: none;
+    text-decoration: none;
+  
+  }
+
+  .menu li.close {
+    display: block;
+    text-align: right;
+  }
+
+  .menu-btn {
+    margin: 0 15px 0 15px;
+   display: inline-block;
+  }
+
+}
+
 @media only screen and (max-width: 768px) {
 
   .nav {
@@ -151,6 +208,7 @@ h1 {
     padding: 0 0 0 0;
 
   }
+  
 
   .about {
     flex-direction: column-reverse;
@@ -222,13 +280,14 @@ h1 {
   }
 
   .award-filters {
-    width: fit-content;
+   
     min-width: 100%;
-    padding: 0 0 0 0;
+
+    padding-right: 0;
   }
 
   .awards-list {
-    width: fit-content;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -240,6 +299,10 @@ h1 {
 
   .awards-group img {
     display: none;
+  }
+
+  .awards-section {
+    padding: 16px
   }
   
 }
@@ -286,8 +349,8 @@ h1 {
 }
 
 .award-filters {
-  width: 400px;
-
+  width: 330px;
+  max-width: 400px;
   height: fit-content;
   display: flex;
   flex-direction: column; 
