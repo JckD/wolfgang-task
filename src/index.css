@@ -67,7 +67,7 @@ body {
   position: relative;
   text-decoration: none;
   text-align: left;
-  margin-right: 100px;
+  margin-right: 120px;
 
 }
 
@@ -212,6 +212,8 @@ h1 {
     display: block;
     text-align: right;
   }
+
+  
 
   .menu-btn {
     margin: 0 15px 0 15px;

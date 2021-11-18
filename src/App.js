@@ -78,8 +78,8 @@ function App() {
                 <li>
                   <a className="menu-a" href="https://www.wolfgangdigital.com/contact/">contact</a>
                 </li>
-                <li><a className="sub-menu close" href="https://www.wolfgangdigital.com/">Home</a></li>
-                <li><a className="sub-menu close" href="https://www.wolfgangdigital.com/privacy-policy">Privacy</a></li>
+                <li className="close"><a className="sub-menu" href="https://www.wolfgangdigital.com/">Home</a></li>
+                <li className="close"><a className="sub-menu" href="https://www.wolfgangdigital.com/privacy-policy">Privacy</a></li>
               
               </ul>
               <button className="menu-btn" onClick={() => openDrawer()}>
