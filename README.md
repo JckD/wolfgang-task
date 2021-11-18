@@ -3,7 +3,9 @@ Task received from Wolfgang digital to recreate https://www.wolfgangdigital.com/
 
 Due on Friday 19th November 2021 9am
 
-Available at https://wolfgangtask.netlify.app/  [![Netlify Status](https://api.netlify.com/api/v1/badges/45312d1b-7d8f-4337-953b-e84dfe1a35fe/deploy-status)](https://app.netlify.com/sites/wolfgangtask/deploys)
+Available at https://wolfgangtask.netlify.app/ 
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/45312d1b-7d8f-4337-953b-e84dfe1a35fe/deploy-status)](https://app.netlify.com/sites/wolfgangtask/deploys)
 
 ## How to run locally
 
@@ -16,7 +18,7 @@ Available at https://wolfgangtask.netlify.app/  [![Netlify Status](https://api.n
 
 ## How I approached the project 
 
-This project involved a lot of reverse engineering mainly using chrome dev tool to inspect the original site. I started by analizing the page I had to copy and breaking down the different parts and components that could be tackled individually. 
+This project involved a lot of reverse engineering mainly using chrome dev tool to inspect the original site.I decided to use React as it is the framework I'm most familiar then I started by analizing the page I had to copy and breaking down the different parts and components that could be tackled individually. 
 
 What that came down to was: 
 
