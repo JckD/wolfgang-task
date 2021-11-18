@@ -28,23 +28,17 @@ export function ToggleDivByNames(name) {
         if(element.classList.contains('hidden'))  {
         
             element.classList.remove('hidden')
-            element.classList.add('block')
 
            for(let headers of element.getElementsByTagName('h4')) {
                headers.classList.remove('hidden')
-               element.classList.add('block')
            }
             
         } else {
            
             element.classList.add('hidden')
-                       element.classList.remove('block')
-
            for(let headers of element.getElementsByTagName('h4')) {
-            headers.classList.add('hidden')
-            element.classList.remove('block')
-
-        }
+                headers.classList.add('hidden')
+            }
         }
     }
 

@@ -1,16 +1,9 @@
-html{
-  background: #fff;
-  height: 100%;
-  position: relative;
-  width: 100%;
-
-}
-
 header {
   top: 0;
   display: flex;
   text-align: center;
   justify-content: center;
+
 }
 
 body {
@@ -22,52 +15,79 @@ body {
  margin: 0;
 }
 
+
+
 .nav {
   position: absolute;
   z-index:1; 
-  display: flex;
+  display: inline-block;
+  align-items: baseline;
   text-align: center;
   justify-content: center;
-  padding: 20px;
+  padding: 0px;
 }
 
-.nav ul {
-  list-style-type: none;
+
+
+.menu {
+  display: inline-block;
+ 
+  list-style: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  
 }
 
-.nav li {
-  float: left;
+.menu li {
+ /* float: left; */
+ display: inline-block;
+
 }
 
-.nav li a {
+.menu li > a {
   
   color: #fff;
- 
+  display: block;
   /* font: 700 1.3125 em; */
   font-weight: 700;
   font-family: lato, "helvetica neue", Helvetica, Arial, sans-serif;
   letter-spacing: .05em;
   line-height: 2.25em; 
   font-size: 1em;
-  padding: 20px;
+  padding: 0 20px 0 20px;
+
   position: relative; 
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 }
 
-.nav li a:hover{
+.menu li > a:hover{
   text-decoration: underline;
 
 }
 
+.menu li.close {
+  display: none;
+  
+}
+
+.menu-btn {
+  display: none;
+  
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: white;
+  height: fit-content;
+  width: fit-content;
+}
+
+
 .banner {
   height: 400px;
   width: 100%;
- position: relative;
+  position: relative;
   
   background-image: url("./images/header_banner.jpg");
   background-repeat: no-repeat;
@@ -87,7 +107,7 @@ h1 {
   color:#fff;
 
   font-weight: 600;
-  font-size: 4.1875em;
+  font-size: 4.2em;
   font-family: lato, "helvetica neue", Helvetica, Arial, sans-serif;
   padding: 0;
   margin: 0;
@@ -99,6 +119,9 @@ h1 {
 
 .logo {
   margin-right: 170px;
+  margin-bottom: -15px;
+  padding-top: 20px;
+  width: 240px;
 }
 
 .about {
@@ -106,9 +129,117 @@ h1 {
   padding: 64px 0px;
   display: flex;
   background: #fff;
-  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .nav {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .logo {
+    right: 20;
+    width: 140px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+  }
+  
+  h1 {
+    font-size: 2.3em;
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+   
+    display: none;
+    background-color: #0d9b4a;
+    width: 300px;
+    height:100%;
+    z-index: 3;
+    transform: translateX(630px);
+    transition: all 200ms ease-in-out; 
+  }
+
+  .menu.open {
+    transform: translateX(0);
+  }
+
+  .menu li {
+    display: none;
+    padding: 0 14px;
+    
+  }
+
+  .menu li > a {
+    border: none;
+    text-decoration: none;
+  
+  }
+
+  .menu li.close {
+    display: block;
+    text-align: right;
+  }
+
+  .menu-btn {
+
+   display: block;
+  }
+
+  /* .drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.4);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 100ms linear;
+  }
+
+  .drawer.open {
+    z-index: 1;
+    opacity: 1;
+  } */
+
+  .awards-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .award-filters {
+    width: fit-content;
+    min-width: 100%;
+    padding: 0 0 0 0;
+  }
+
+  .awards-list {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .award-image {
+    display: none;
+  }
+
+  .awards-group img {
+    display: none;
+  }
+  
 }
 
 .about p {
@@ -124,18 +255,23 @@ h1 {
 .text-container {
   padding: 16px;
   height: 304px;
-  width: 700px;
+  max-width: 700px;
   margin: 0px;
+  flex-direction: column;
 }
 
 .img-container {
-  height: 300px;
-  width: 460px;
+ 
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   vertical-align: baseline;
+}
+
+.img-container img {
+ height: auto;
+  max-width: 100%;
 }
 
 .awards-section {
@@ -149,6 +285,7 @@ h1 {
 
 .award-filters {
   width: 400px;
+
   height: fit-content;
   display: flex;
   flex-direction: column; 
@@ -158,7 +295,6 @@ h1 {
 .filter-title {
   display: flex;
   flex-direction: row;
-  
   justify-content: space-between;
   align-items: baseline;
   height: fit-content;
@@ -228,7 +364,7 @@ h1 {
 
 .filter-input {
  box-sizing: border-box;
-
+ 
 }
 
 .filter-label {
@@ -241,6 +377,7 @@ h1 {
 
 .awards-list {
   width: 750px;
+  max-width: 100%;
 }
 
 .awards-list p {
@@ -287,6 +424,9 @@ h1 {
   position: relative;
 }
 
+
+
+
 .ceremony {
 
   display: grid;
@@ -315,13 +455,19 @@ h1 {
   font-style: italic;
 }
 
+.ceremony h4 :hover {
+  text-decoration: underline;
+
+}
+/* 
 .award {
  text-decoration: none;
+ 
 }
 
 .award :hover {
   text-decoration: underline;
-}
+} */
 
 .footer {
   background: #634061;
@@ -363,8 +509,4 @@ h1 {
 
 .hidden {
   display: none;
-}
-
-.block {
-  display: block;
 }
