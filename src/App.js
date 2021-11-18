@@ -3,7 +3,7 @@ import contentImage from './images/content_image.jpg'
 import AwardGroup from './components/awardGroup';
 import React,{useState,useEffect} from 'react';
 import { ToggleDivByID } from './utils/toggleDiv';
-import { drawer, openDrawer } from './utils/openDrawer';
+import { closeDrawer, drawer, openDrawer } from './utils/drawer';
 
 function App() {
 
@@ -57,33 +57,37 @@ function App() {
               
 
             
+            
               <ul className="menu">
-           
+              <li className="menu-title close" onClick={() => closeDrawer()}><span>Main Menu</span></li>
                 <li>
-                  <a href="https://www.wolfgangdigital.com/our-work/">our work</a>
+                  <a className="menu-a" href="https://www.wolfgangdigital.com/our-work/">our work</a>
                 </li>
                 <li>
-                  <a href="https://www.wolfgangdigital.com/about-us/">about us</a>
+                  <a className="menu-a" href="https://www.wolfgangdigital.com/about-us/">about us</a>
                 </li>
                 <li>
-                  <a href="https://www.wolfgangdigital.com/careers/">careers</a>
+                  <a className="menu-a" href="https://www.wolfgangdigital.com/careers/">careers</a>
                 </li>
                 <li>
-                  <a href="https://www.wolfgangdigital.com/blog/">blog</a>
+                  <a className="menu-a" href="https://www.wolfgangdigital.com/blog/">blog</a>
                 </li>
                 <li>
-                  <a href="https://www.wolfgangdigital.com/awards/">awards</a>
+                  <a className="menu-a" href="https://www.wolfgangdigital.com/awards/">awards</a>
                 </li>
                 <li>
-                  <a href="https://www.wolfgangdigital.com/contact/">contact</a>
+                  <a className="menu-a" href="https://www.wolfgangdigital.com/contact/">contact</a>
                 </li>
+                <li><a className="sub-menu close" href="https://www.wolfgangdigital.com/">Home</a></li>
+                <li><a className="sub-menu close" href="https://www.wolfgangdigital.com/privacy-policy">Privacy</a></li>
+              
               </ul>
               <button className="menu-btn" onClick={() => openDrawer()}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                 </svg>
               </button>
-              <div className="drawer"></div>
+              <div className="overlay" onClick={() => closeDrawer()}></div>
             
           </div>
            
